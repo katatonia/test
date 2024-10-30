@@ -1,0 +1,18 @@
+// base
+@use "base/variables";
+@use "base/global";
+@use "base/reboot";
+@use "base/fonts";
+
+// blocks
+@use "blocks/header";
+@use "blocks/card";
+@use "blocks/slider";
+@use "blocks/reviews";
+@use "blocks/page";
+@use "blocks/catalog";
+@use "blocks/projects";
+@use "blocks/pagination";
+@use "blocks/connection";
+@use "blocks/social";
+@use "blocks/contacts";

@@ -1,0 +1,42 @@
+@use "base/variables";
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 2;
+
+    &__link {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        fill: variables.$white;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: variables.$vp-1024) {
+        &__link {
+            width: 30px;
+            height: 30px;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    @media (max-width: variables.$vp-768) {
+        gap: 10px;
+    }
+}

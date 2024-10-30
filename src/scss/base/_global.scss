@@ -1,0 +1,96 @@
+@use 'variables';
+
+html {
+    font-size: 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "SourceCodePro", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+    background-color: variables.$black;
+    color: variables.$white;
+
+    @media (max-width: variables.$vp-1024) {
+        font-size: 16px;
+    }
+
+    @media (max-width: variables.$vp-768) {
+        font-size: 14px;
+    }
+}
+
+.bg-img {
+    position: relative;
+}
+
+.bg-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lock{
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.page  {
+    flex: 1 1 auto;
+}
+
+.container {
+    // max-width: 1880px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media (max-width: variables.$vp-1366) {
+        padding: 0 20px;
+    }
+}
+
+.button {
+    width: 16.6667rem;
+    max-width: 100%;
+    background-color: variables.$black;
+    color: variables.$white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font: {
+        size: 1rem;
+        weight: 400;
+    }
+    transition: .3s;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+span,
+div {
+    cursor: default;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}

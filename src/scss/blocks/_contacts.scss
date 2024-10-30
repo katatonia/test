@@ -1,0 +1,56 @@
+@use "base/variables";
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	color: variables.$white;
+	z-index: 3;
+	align-items: flex-end;
+	gap: 1rem;
+
+	&__link {
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+		fill: variables.$white;
+		gap: 15px;
+
+		span {
+			margin-bottom: 3px;
+			cursor: pointer;
+			display: block;
+			position: relative;
+
+			&:hover {
+				&::after {
+					position: absolute;
+					content: "";
+					height: 2px;
+					width: 100%;
+					background-color: variables.$white;
+					bottom: 0;
+					left: 0;
+				}
+			}
+		}
+
+		svg {
+			width: 30px;
+			height: 30px;
+			fill: variables.$white;
+		}
+	}
+
+	@media (max-width: variables.$vp-1366) {
+		&__link {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: variables.$vp-768) {
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
